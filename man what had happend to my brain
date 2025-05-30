@@ -1,0 +1,16 @@
+# Function to calculate change due to customer
+def calculate_change(bill_amount, paid_amount):
+    # Check if paid amount is enough
+    if paid_amount >= bill_amount:
+        change = paid_amount - bill_amount
+        return change
+    else:
+        return "Not enough money paid!"
+
+# Get input from user
+bill = float(input("Enter the bill amount: "))
+paid = float(input("Enter the amount paid by customer: "))
+
+# Calculate and display the change
+result = calculate_change(bill, paid)
+print(f"The change due to the customer is {result} rupees")
